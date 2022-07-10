@@ -6,6 +6,7 @@ from starlette.requests import Request
 
 async def homepage(request: Request):
     request.state.test = [x for x in range(999999)]
+    # request.state.test = None
     return JSONResponse({'hello': 'world'})
 
 
